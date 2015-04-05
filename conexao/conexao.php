@@ -10,11 +10,7 @@ class conexao_db {
             if ($_SERVER["SERVER_NAME"] == "localhost") {
                 $this->link = new PDO("mysql:host=localhost;dbname=javascript_db", "root", "");
             } else {
-                $mysql_host = "mysql.hostinger.com.br";
-                $mysql_user = "u369672736_user";
-                $mysql_database = "u369672736_db";
-                $mysql_password = '6$SvGV]#zAiICIAdEp';
-                $this->link = new PDO("mysql:host=$mysql_host;dbname=$mysql_database", $mysql_user, $mysql_password);
+                
             }
         } catch (PDOException $e) {
             exit("<div style='max-width:500px;border:1px solid #ccc;padding:0px;margin:100px auto;text-align:center;'>"
